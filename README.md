@@ -20,7 +20,9 @@ will cache results by `zipcode` to group requests with same zipcodes to use the 
 
 The other API calls to National Weather Service will also be cached.
 - The grid points call is cached by `latitude` and `longitude`
-- The forecast call is cached by the entire URL
+- The forecast call is cached by the entire URL.
+
+The application will notify the user when a cached forecast is displayed. The user will not be notified of caching of geocoding and grid point requests.
 
 # Developer Info
 This application was created using the `rails-new` tool with support for [dev container](https://guides.rubyonrails.org/getting_started_with_devcontainer.html) for a full-features development environment in [Visual Studio Code](https://code.visualstudio.com/).
