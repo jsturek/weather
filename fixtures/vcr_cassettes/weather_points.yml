@@ -1,0 +1,152 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.weather.gov/points/38.8987,-77.0365
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.12.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.20.1
+      Content-Type:
+      - application/geo+json
+      X-Powered-By:
+      - PHP/8.0.30
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - X-Correlation-Id, X-Request-Id, X-Server-Id
+      X-Request-Id:
+      - f71c15bf-b0c3-4214-a163-8227c0b28ec5
+      X-Correlation-Id:
+      - 767b8d
+      X-Server-Id:
+      - vm-bldr-nids-apiapp13.ncep.noaa.gov
+      Vary:
+      - Accept,Feature-Flags,Accept-Language
+      - Accept-Encoding
+      Cache-Control:
+      - public, max-age=80654, s-maxage=120
+      Expires:
+      - Thu, 13 Mar 2025 20:30:33 GMT
+      Date:
+      - Wed, 12 Mar 2025 22:06:19 GMT
+      Content-Length:
+      - '3059'
+      Connection:
+      - keep-alive
+      X-Edge-Request-Id:
+      - 2e25a539
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains ; preload
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "@context": [
+                "https://geojson.org/geojson-ld/geojson-context.jsonld",
+                {
+                    "@version": "1.1",
+                    "wx": "https://api.weather.gov/ontology#",
+                    "s": "https://schema.org/",
+                    "geo": "http://www.opengis.net/ont/geosparql#",
+                    "unit": "http://codes.wmo.int/common/unit/",
+                    "@vocab": "https://api.weather.gov/ontology#",
+                    "geometry": {
+                        "@id": "s:GeoCoordinates",
+                        "@type": "geo:wktLiteral"
+                    },
+                    "city": "s:addressLocality",
+                    "state": "s:addressRegion",
+                    "distance": {
+                        "@id": "s:Distance",
+                        "@type": "s:QuantitativeValue"
+                    },
+                    "bearing": {
+                        "@type": "s:QuantitativeValue"
+                    },
+                    "value": {
+                        "@id": "s:value"
+                    },
+                    "unitCode": {
+                        "@id": "s:unitCode",
+                        "@type": "@id"
+                    },
+                    "forecastOffice": {
+                        "@type": "@id"
+                    },
+                    "forecastGridData": {
+                        "@type": "@id"
+                    },
+                    "publicZone": {
+                        "@type": "@id"
+                    },
+                    "county": {
+                        "@type": "@id"
+                    }
+                }
+            ],
+            "id": "https://api.weather.gov/points/38.8987,-77.0365",
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -77.0365,
+                    38.8987
+                ]
+            },
+            "properties": {
+                "@id": "https://api.weather.gov/points/38.8987,-77.0365",
+                "@type": "wx:Point",
+                "cwa": "LWX",
+                "forecastOffice": "https://api.weather.gov/offices/LWX",
+                "gridId": "LWX",
+                "gridX": 97,
+                "gridY": 71,
+                "forecast": "https://api.weather.gov/gridpoints/LWX/97,71/forecast",
+                "forecastHourly": "https://api.weather.gov/gridpoints/LWX/97,71/forecast/hourly",
+                "forecastGridData": "https://api.weather.gov/gridpoints/LWX/97,71",
+                "observationStations": "https://api.weather.gov/gridpoints/LWX/97,71/stations",
+                "relativeLocation": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            -77.017229,
+                            38.904103
+                        ]
+                    },
+                    "properties": {
+                        "city": "Washington",
+                        "state": "DC",
+                        "distance": {
+                            "unitCode": "wmoUnit:m",
+                            "value": 1772.539084811
+                        },
+                        "bearing": {
+                            "unitCode": "wmoUnit:degree_(angle)",
+                            "value": 250
+                        }
+                    }
+                },
+                "forecastZone": "https://api.weather.gov/zones/forecast/DCZ001",
+                "county": "https://api.weather.gov/zones/county/DCC001",
+                "fireWeatherZone": "https://api.weather.gov/zones/fire/DCZ001",
+                "timeZone": "America/New_York",
+                "radarStation": "KLWX"
+            }
+        }
+  recorded_at: Wed, 12 Mar 2025 22:06:19 GMT
+recorded_with: VCR 6.3.1

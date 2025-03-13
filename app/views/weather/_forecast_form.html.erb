@@ -1,0 +1,10 @@
+<div class="form-box">
+    <p>Enter an address to get a weather forecast for:</p>
+    <form action="/" method="get">
+        <input type="text" name="street" value="<%= params[:street] %>" placeholder="Enter street address" />
+        <input type="text" name="city" value="<%= params[:city] %>" placeholder="Enter city" />
+        <input type="text" name="state" value="<%= params[:state] %>" placeholder="Enter state" />
+        <input type="text" name="zip" value="<%= params[:zip] %>" placeholder="Enter zipcode" />
+        <input type="submit" value="Get Weather" />
+    </form>
+</div>
