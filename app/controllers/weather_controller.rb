@@ -6,7 +6,6 @@ class WeatherController < ApplicationController
   def index
     @forecast_from_cache = forecast[:from_cache] || false
     @forecast_summary = forecast[:days] || []
-    puts "Forecast Summary: #{@forecast_summary.inspect}"
     @valid_params = valid_params?
   end
 
