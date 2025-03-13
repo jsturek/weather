@@ -1,6 +1,6 @@
 # README
 
-# Overview*
+# Overview
 This Ruby on Rails weather application allows a user to retrieve a weekly forecast for inputted address. It requires user to provide street address, city, state and zipcode. It is limited to United States address due to the source of forecast information only supports the United States.
 
 # Data Sources
@@ -19,13 +19,13 @@ For geocoding this application requires street address, city, state and zipcode 
 will cache results by `zipcode` to group requests with same zipcodes to use the cached latitude and longitude which will be sufficient for weather geocoding.
 
 The other API calls to National Weather Service will also be cached.
-* The grid points call is cached by `latitude` and `longitude`
-* The forecast call is cached by the entire URL
+- The grid points call is cached by `latitude` and `longitude`
+- The forecast call is cached by the entire URL
 
 # Developer Info
 This application was created using the `rails-new` tool with support for [dev container](https://guides.rubyonrails.org/getting_started_with_devcontainer.html) for a full-features development environment in [Visual Studio Code](https://code.visualstudio.com/).
 
 Some useful commands to run in dev container terminal in Visual Studio Code.
-* `bin/rails server` to start rails server and access application at `localhost:3000/`
-* `bin/rubocop` to run rubocop ruby linter
-* `bin/rails spec` to run rspec test suite. After running coverage report written to `coverage/index.html`
+- `bin/rails server` to start rails server and access application at `localhost:3000/`
+- `bin/rubocop` to run rubocop ruby linter
+- `bin/rails spec` to run rspec test suite. After running coverage report written to `coverage/index.html`
