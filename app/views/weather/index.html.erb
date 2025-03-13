@@ -1,0 +1,5 @@
+<h1>Weather Forecast Lookup</h1>
+<%= render partial: "forecast_form" %>
+<% if @forecast_summary %>
+  <%= render partial: "forecast_summary" %>
+<% end %>

@@ -23,5 +23,8 @@ module Weather
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # Redis configuration for caching with 10 minute default expiration
+    config.cache_store = :redis_store, "redis://localhost:6379/0/cache", { expires_in: 10.minutes }
   end
 end

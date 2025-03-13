@@ -28,6 +28,12 @@ gem "solid_cache"
 gem "solid_queue"
 gem "solid_cable"
 
+# Use Faraday for HTTP requests
+gem "faraday"
+
+# Use Redis for caching
+gem "redis"
+
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
@@ -49,6 +55,16 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  # Use rspec for testing [https://rspec.info/]
+  gem "rspec-rails"
+
+  # Use simplecov for test coverage
+  gem "simplecov", require: false, group: :test
+
+  # Use vcr and webmock for HTTP request stubbing
+  gem "vcr"
+  gem "webmock"
 end
 
 group :development do

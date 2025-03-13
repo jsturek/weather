@@ -8,3 +8,84 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+ul {
+  list-style-type: none;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+div.form-box {
+  max-width: 600px;
+  padding: 1em;
+  border: 1px solid #ccc;
+
+  p {
+    margin: .5em 0;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+
+    label {
+      display: block;
+    }
+
+    input[type="submit"] {
+      grid-column: span 2;
+    }
+  }
+}
+
+.forecast-summary {
+    margin: 1em 0;
+
+    h2 {
+      margin: 0.5em 0;
+      font-size: 1em;
+    }
+
+    p {
+      margin: 0.5em 0;
+    }
+
+    ul.day-list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      padding-left: 0;
+    }
+
+    li.day-item {
+      margin: 0 1em 1em 0;
+      padding: 1em;
+      list-style: none;
+      display: inline-block;
+      width: calc(100% / 5);
+      min-width: 150px;
+      border: 1px solid #ccc;
+
+      ul {
+        display: block;
+      }
+
+      li {
+        display: block;
+        margin: 0;
+        padding: 0;
+        font-size: 0.9em;
+      }
+
+      li.details {
+        display: block;
+        padding-top: 1em;
+        list-style: none;
+      }
+    }
+  }

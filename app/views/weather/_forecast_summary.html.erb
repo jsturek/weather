@@ -1,0 +1,28 @@
+<div class="forecast-summary">
+  <% if @forecast_from_cache == true %>  
+    <p>Forecast is from cached data.</p>
+  <% end %>
+
+  <ul class="day-list">
+    <% @forecast_summary.each do |date, items| %>
+      <li class="day-item">
+      <% items.each_with_index do |item, item_index| %>
+        <h2>
+          <%= item[:name] %>
+        <% if item_index == 0 %>
+           - <%= DateTime.parse(item[:start_time]).strftime('%B %d') %>
+        <% end %>
+        </h2>
+        <ul>
+            <li>Temp: <%= item[:temperature] %> <%= item[:temperature_unit] %></li>
+            <li>Wind: <%= item[:wind_speed] %> <%= item[:wind_direction] %></li>
+            <li class="details"><%= item[:detailed_forecast] %></li>
+        </ul>
+      <% end %>
+      </li>
+    <% end %>
+    <% if !params[:street].nil? && @forecast_summary.count == 0 %>
+      <li class="summary-item">No weather data available for address.</li>
+    <% end %>
+  </ul>
+</div>
